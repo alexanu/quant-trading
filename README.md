@@ -4,7 +4,7 @@
 
 ## Intro
 
-Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly strange trading ideas I come up with to beat the market (or so I thought). There is no options strategy or HFT strategy simply because option data and ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless so we don't have to worry about slippage or liquidity. 
+Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly quantamental analysis on some strange ideas I come up with to beat the market (or so I thought). There is no options strategy or HFT strategy simply because option data and ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless so we don't have to worry about slippage or liquidity. 
 
 ### Table of Contents
 
@@ -36,7 +36,7 @@ Most scripts inside this repository are technical indicator automated trading. T
 
 2.Bloomberg/Eikon
 
-3.<a href=http://www.histdata.com/>Histdata</a>/<a href=https://fxhistoricaldata.com>fxhistoricaldata</a>
+3.<a href=https://www.histdata.com/>Histdata</a>/<a href=https://fxhistoricaldata.com>fxhistoricaldata</a>
 
 4.<a href=https://stooq.com>Stooq</a>/<a href=https://www.quandl.com>Quandl</a>
 
@@ -112,7 +112,7 @@ The rules of awesome oscillator could be found in <a href=https://www.tradingvie
 
 This project is inspired by an <a href=https://www.bloomberg.com/news/articles/2018-05-20/crude-oil-s-surge-is-putting-the-petro-back-in-petrocurrencies>article</a> on oil-backed foreign exchange. When the oil exits the bear market, the currency exchange of oil producing countries would also bounce back. Does this statement really hold? 
 
-According to the article by Bloomberg (or many other similar research), researchers examine the correlation between petrocurrency and oil price, instead of the causality. But correlation does not equal to causality. Correlation could be a coincidence of a math game. We simply cannot draw the conclusion that oil price moves the currency. Some researchers even use bootstrapping which greatly destroys the autocorrelation of a time series. Thus, it is vital to apply academic analysis and computer simulation on some petrocurrencies to test the causality of oil.  
+According to the article by Bloomberg (or many other similar research), researchers examine the correlation between petrocurrency and oil price, instead of the causality. But correlation does not equal to causality. Correlation could be a coincidence of a math game. We simply cannot draw the conclusion that oil price moves the currency. Some researchers even use bootstrapping which greatly destroys the autocorrelation of a time series. Thus, it is vital to apply academic analysis and computer simulation on some petrocurrencies to test the causality of oil.
 
 For more details, please refer to the <a href=https://github.com/je-suis-tm/quant-trading/blob/master/Oil%20Money%20project/README.md>read me page</a> of a separate directory or <a href=https://je-suis-tm.github.io/quant-trading/oil-money>quant trading section</a> on my personal blog.
 
@@ -140,7 +140,7 @@ It is worth mentioning that SAR and RSI (which will be featured in a later chapt
 
 ### 9.Bollinger Bands Pattern Recognition
 
-Bollinger Bands is a very simple but powerful indicator. There are three bands of this indicator. The mid band is the moving average on the price series (usually takes 20 lags). The upper and lower bands are two moving standard deviations away from the mid band. Bollinfer Bands can be used to test for various types of strategies. 
+Bollinger Bands is a very simple but powerful indicator. There are three bands of this indicator. The mid band is the moving average on the price series (usually takes 20 lags). The upper and lower bands are two moving standard deviations away from the mid band. Bollinger Bands can be used to test for various types of strategies. 
 
 For volatility trading, contraction and expansion of the band width are crucial elements. Any distinct momentum clustering (it can take form of either upward or downward) would result in a Bollinger Bands expansion. And the oscillation in a horizontal channel would result in a Bollinger Bands contraction. 
 
