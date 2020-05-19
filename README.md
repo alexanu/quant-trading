@@ -4,41 +4,59 @@
 
 ## Intro
 
-Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly quantamental analysis on some strange ideas I come up with to beat the market (or so I thought). There is no options strategy or HFT strategy simply because option data and ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless so we don't have to worry about slippage or liquidity. 
+&nbsp;
+
+> We’re right 50.75 percent of the time... but we’re 100 percent right 50.75 percent of the time, you can make billions that way. <br><br>
+> --- Robert Mercer, co-CEO of Renaissance Technologies
+
+> If you trade a lot, you only need to be right 51 percent of the time, we need a smaller edge on each trade. <br><br>
+> --- Elwyn Berlekamp, co-Founder of Combinatorial Game Theory
+
+###### *The quotes above come from a book by Gregory Zuckerman, a book every quant must read, THE MAN WHO SOLVED THE MARKET.*
+
+&nbsp;
+
+Most scripts inside this repository are technical indicator automated trading. These scripts include various types of momentum trading, opening range breakout and statistical arbitrage strategies. Yet, quantitative trading is not only about technical analysis. It can refer to computational finance to exploit derivative price mismatch, pattern recognition on alternative datasets to generate alphas or low latency order execution in the market microstructure. Hence, there are a few ongoing projects inside this repository. These projects are mostly quantamental analysis on some strange ideas I come up with to beat the market (or so I thought). There is no HFT strategy simply because ultra high frequency data are very expensive to acquire (even consider platforms like Quantopian or Quandl). Additionally, please note that, all scripts are historical data backtesting/forward testing (basically via Python, not C++, maybe Julia in the near future). The assumption is that all trades are frictionless. No slippage, no surcharge, no illiquidity. 
 
 ### Table of Contents
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#1-macd-oscillator>1.MACD oscillator</a>
+1. <a href=https://github.com/je-suis-tm/quant-trading#1-macd-oscillator>MACD oscillator</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#2-pair-trading>2.Pair trading</a>
+2. <a href=https://github.com/je-suis-tm/quant-trading#2-pair-trading>Pair trading</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#3-heikin-ashi-candlestick>3.Heikin-Ashi candlestick</a>
+3. <a href=https://github.com/je-suis-tm/quant-trading#3-heikin-ashi-candlestick>Heikin-Ashi candlestick</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#4-london-breakout>4.London Breakout</a>
+4. <a href=https://github.com/je-suis-tm/quant-trading#4-london-breakout>London Breakout</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#5awesome-oscillator>5.Awesome oscillator</a>
+5. <a href=https://github.com/je-suis-tm/quant-trading#5awesome-oscillator>Awesome oscillator</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#6oil-money-project>6.Oil Money project</a>
+6. <a href=https://github.com/je-suis-tm/quant-trading#6oil-money-project>Oil Money project</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#7dual-thrust>7.Dual Thrust</a>
+7. <a href=https://github.com/je-suis-tm/quant-trading#7dual-thrust>Dual Thrust</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#8parabolic-sar>8.Parabolic SAR</a>
+8. <a href=https://github.com/je-suis-tm/quant-trading#8parabolic-sar>Parabolic SAR</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#9bollinger-bands-pattern-recognition>9.Bollinger Bands Pattern Recognition</a>
+9. <a href=https://github.com/je-suis-tm/quant-trading#9bollinger-bands-pattern-recognition>Bollinger Bands Pattern Recognition</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#10-relative-strength-index-pattern-recognition>10.Relative Strength Index Pattern Recognition</a>
+10. <a href=https://github.com/je-suis-tm/quant-trading#10-relative-strength-index-pattern-recognition>Relative Strength Index Pattern Recognition</a>
 
-<a href=https://github.com/je-suis-tm/quant-trading/blob/master/README.md#11monte-carlo-project>11.Monte Carlo project</a>
+11. <a href=https://github.com/je-suis-tm/quant-trading#11monte-carlo-project>Monte Carlo project</a>
+
+12. <a href=https://github.com/je-suis-tm/quant-trading#12options-straddle>Options Straddle</a>
+
+13. <a href=https://github.com/je-suis-tm/quant-trading#13portfolio-optimization-project>Portfolio Optimization project</a>
 
 ### Data Source
 
-1.<a href=https://finance.yahoo.com>Yahoo Finance</a>/<a href=https://pypi.org/project/fix-yahoo-finance>fix_yahoo_finance package</a>
+1. <a href=https://finance.yahoo.com>Yahoo Finance</a>/<a href=https://pypi.org/project/fix-yahoo-finance>fix_yahoo_finance package</a>
 
-2.Bloomberg/Eikon
+2. Bloomberg/Eikon
 
-3.<a href=https://www.histdata.com/>Histdata</a>/<a href=https://fxhistoricaldata.com>fxhistoricaldata</a>
+3. <a href=https://www.histdata.com/>Histdata</a>/<a href=https://fxhistoricaldata.com>FX Historical Data</a>
 
-4.<a href=https://stooq.com>Stooq</a>/<a href=https://www.quandl.com>Quandl</a>
+4. <a href=https://stooq.com>Stooq</a>/<a href=https://www.quandl.com>Quandl</a>
+
+5. <a href=https://github.com/je-suis-tm/web-scraping>Web Scraping</a>
 
 <br>
 
@@ -62,9 +80,9 @@ The core idea of pair trading is <a href=https://en.wikipedia.org/wiki/Cointegra
 
 ![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/pair%20trading%20eg%20two%20step.PNG)
 
-![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/pair%20trading%20z%20stats.png)
-
 ![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/pair%20trading%20positions.png)
+
+![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/pair%20trading%20asset.png)
 
 ### 3. Heikin-Ashi candlestick
 
@@ -110,7 +128,7 @@ The rules of awesome oscillator could be found in <a href=https://www.tradingvie
 
 ### 6.Oil Money project
 
-This project is inspired by an <a href=https://www.bloomberg.com/news/articles/2018-05-20/crude-oil-s-surge-is-putting-the-petro-back-in-petrocurrencies>article</a> on oil-backed foreign exchange. When the oil exits the bear market, the currency exchange of oil producing countries would also bounce back. Does this statement really hold? 
+This project is inspired by an <a href=https://www.bloomberg.com/news/articles/2018-05-20/crude-oil-s-surge-is-putting-the-petro-back-in-petrocurrencies>article</a> on oil-backed foreign exchange. Amid the bullish outlook for crude oil, the currency exchange of oil producing countries would also bounce back. Does this statement really hold? 
 
 According to the article by Bloomberg (or many other similar research), researchers examine the correlation between petrocurrency and oil price, instead of the causality. But correlation does not equal to causality. Correlation could be a coincidence of a math game. We simply cannot draw the conclusion that oil price moves the currency. Some researchers even use bootstrapping which greatly destroys the autocorrelation of a time series. Thus, it is vital to apply academic analysis and computer simulation on some petrocurrencies to test the causality of oil.
 
@@ -177,6 +195,24 @@ Here comes the argument on Linkedin that caught my eyes the other day. "Stock pr
 For more details, please refer to the <a href=https://github.com/je-suis-tm/quant-trading/blob/master/Monte%20Carlo%20project/README.md>read me</a> page of a separate directory or <a href=https://je-suis-tm.github.io/quant-trading/monte-carlo>quant trading</a> section on my personal blog.
 
 ![alt text](https://raw.githubusercontent.com/je-suis-tm/quant-trading/master/Monte%20Carlo%20project/preview/ge%20simulation2.png)
+
+### 12.Options Straddle
+
+Here marks the debut of options strategy in this repository. Straddle refers to the shape of compasses in the payoff diagram of the strategy. A long straddle involves buying a call option and a put option at the same strike price, the same expiration date and preferably the same price. In reality, the same price is not always feasible (call options price higher implies higher upside risk, vice versa). It is recommended to trade when the price disparity between call and put options is converging.
+
+Long straddle is commonly seen in event driven strategy, e.g. political referendum, company earning release. It profits from the uncertainty of both-side risk. For upside risk, the potential profit is unlimited. The potential loss does not come from the downside risk (there is limited gain from downside risk). Instead, it comes from the stagnant price due to insufficient volatility. In this case, short straddle is more suitable for sideways choppy market.
+
+The crucial element of options straddle is the selection of the strike price. As the price of options contains the market consensus, the only way to maximize the profit is to find the optimal strike price to shrink the loss bandwidth. This is where the economists kick in and offer base case outlook plus best/worst scenarios. In contrast to the common misunderstanding of quantitative trading, Option Greeks are no silver bullet. Quantitative combined with fundamental in one, so-called quantamental, makes the portfolio impeccable.
+
+![alt text](https://github.com/je-suis-tm/quant-trading/blob/master/preview/options%20straddle%20payoff%20diagram.png)
+
+### 13.Portfolio Optimization project
+
+Modern portfolio theory was introduced in 1952 by Nobel laureate Harry Markowitz. It is part of investment class 101. But I watched a video by <a href=https://www.wolfram.com/training/videos/FIN015>Wolfram</a> recently. It challenged the traditional approach and introduced graph theory to asset diversification. There are plenty of quant shops deploying fancy mathematic tools to solve the market. The real question for us is, as fancy as it sounds, does graph theory work on portfolio optimization?
+
+![alt text](https://github.com/je-suis-tm/graph-theory/blob/master/Portfolio%20Optimization%20project/preview/outta%20sample%20mean%20variance.png)
+
+This project is documented in the repository of <a href=https://github.com/je-suis-tm/graph-theory>Graph Theory</a>. For more details, please refer to the <a href=https://github.com/je-suis-tm/graph-theory/blob/master/Portfolio%20Optimization%20project/README.md>read me</a> page of a separate directory or <a href=https://je-suis-tm.github.io/graph-theory/portfolio-optimization>graph theory</a> section on my personal blog.
 
 <br>
 
